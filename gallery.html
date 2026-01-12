@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Work - El-Leithy</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> 
+</head>
+<body>
+  <!-- Header -->
+  <header id="header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">El-Leithy</a>
+      
+      <div class="hamburger" id="hamburger">
+        <i class="fas fa-bars"></i>
+      </div>
+      
+      <ul class="nav-menu" id="nav-menu">
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="index.html#about" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="index.html#social" class="nav-link">Connect</a></li>
+        <li class="nav-item"><a href="gallery.html" class="nav-link active">Gallery</a></li>
+        <li class="nav-item"><a href="calculator.html" class="nav-link">Calculator</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="gallery-section">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-subtitle">OUR PORTFOLIO</p>
+        <h1 class="section-title">Our Interior Design Projects</h1>
+        <p class="section-description">
+          because credibility is our first goal, all the images displayed are real images and not 3D.
+        </p>
+      </div>
+
+      <!-- ARD EL GOLF Project (M images) -->
+      <div class="gallery-group">
+        <div class="gallery-text">
+          <h2>ARD EL GOLF Project</h2>
+          <p>A luxurious residential project in the heart of Ard El Golf, featuring contemporary design with premium finishes and attention to detail in every space.</p>
+        </div>
+
+        <div class="carousel-container">
+          <div class="gallery-grid active" data-project="ard-el-golf-1" data-slide="0">
+            <div class="gallery-item" onclick="openLightbox('ard-el-golf-1', 0)">
+              <img src="ard_el_golf/M1.jpg" alt="ARD EL GOLF Living Room">
+              <div class="gallery-overlay">
+                <h3>Living Area</h3>
+                <p>Elegant contemporary design</p>
+              </div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox('ard-el-golf-1', 1)">
+              <img src="ard_el_golf/M2.jpg" alt="ARD EL GOLF Kitchen">
+              <div class="gallery-overlay">
+                <h3>Kitchen</h3>
+                <p>Premium finishes and functionality</p>
+              </div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox('ard-el-golf-1', 2)">
+              <img src="ard_el_golf/M3.jpg" alt="ARD EL GOLF Bedroom">
+              <div class="gallery-overlay">
+                <h3>Master Bedroom</h3>
+                <p>Luxurious retreat space</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-grid" data-project="ard-el-golf-1" data-slide="1">
+            <div class="gallery-item" onclick="openLightbox('ard-el-golf-1', 3)">
+              <img src="ard_el_golf/M4.jpg" alt="ARD EL GOLF Bathroom">
+              <div class="gallery-overlay">
+                <h3>Bathroom</h3>
+                <p>Spa-like luxury bathroom</p>
+              </div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox('ard-el-golf-1', 4)">
+              <img src="ard_el_golf/M5.jpg" alt="ARD EL GOLF Dining Area">
+              <div class="gallery-overlay">
+                <h3>Dining Area</h3>
+                <p>Elegant dining space</p>
+              </div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox('ard-el-golf-1', 5)">
+              <img src="ard_el_golf/M6.jpg" alt="ARD EL GOLF Details">
+              <div class="gallery-overlay">
+                <h3>Design Details</h3>
+                <p>Attention to every detail</p>
+              </div>
+            </div>
+          </div>
+
+          <button class="carousel-arrow carousel-prev" onclick="navigateSlide('ard-el-golf-1', -1)">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="carousel-arrow carousel-next" onclick="navigateSlide('ard-el-golf-1', 1)">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+
+
+      <!-- ARD EL GOLF Project 2 (P images) -->
+      <div class="gallery-group">
+        <div class="gallery-text">
+          <h2>ARD EL GOLF Project 2</h2>
+          <p>A luxurious residential project in the heart of Ard El Golf, featuring contemporary design with premium finishes and attention to detail in every space.</p>
+        </div>
+
+        <div class="carousel-container">
+          <div class="gallery-grid active" data-project="ard-el-golf-2" data-slide="0">
+            <div class="gallery-item" onclick="openLightbox('ard-el-golf-2', 0)">
+              <img src="ard_el_golf/P1.jpg" alt="ARD EL GOLF Living Room">
+              <div class="gallery-overlay">
+                <h3>Living Area</h3>
+                <p>Elegant contemporary design</p>
+              </div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox('ard-el-golf-2', 1)">
+              <img src="ard_el_golf/P2.jpg" alt="ARD EL GOLF Kitchen">
+              <div class="gallery-overlay">
+                <h3>Kitchen</h3>
+                <p>Premium finishes and functionality</p>
+              </div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox('ard-el-golf-2', 2)">
+              <img src="ard_el_golf/P3.jpg" alt="ARD EL GOLF Bedroom">
+              <div class="gallery-overlay">
+                <h3>Master Bedroom</h3>
+                <p>Luxurious retreat space</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-grid" data-project="ard-el-golf-2" data-slide="1">
+            <div class="gallery-item" onclick="openLightbox('ard-el-golf-2', 3)">
+              <img src="ard_el_golf/P4.jpg" alt="ARD EL GOLF Bathroom">
+              <div class="gallery-overlay">
+                <h3>Bathroom</h3>
+                <p>Spa-like luxury bathroom</p>
+              </div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox('ard-el-golf-2', 4)">
+              <img src="ard_el_golf/P5.jpg" alt="ARD EL GOLF Dining Area">
+              <div class="gallery-overlay">
+                <h3>Dining Area</h3>
+                <p>Elegant dining space</p>
+              </div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox('ard-el-golf-2', 5)">
+              <img src="ard_el_golf/P6.jpg" alt="ARD EL GOLF Details">
+              <div class="gallery-overlay">
+                <h3>Design Details</h3>
+                <p>Attention to every detail</p>
+              </div>
+            </div>
+          </div>
+
+          <button class="carousel-arrow carousel-prev" onclick="navigateSlide('ard-el-golf-2', -1)">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="carousel-arrow carousel-next" onclick="navigateSlide('ard-el-golf-2', 1)">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+
+
+      <!-- HYDE PARK Project -->
+      <div class="gallery-group">
+        <div class="gallery-text">
+          <h2>HYDE PARK Project</h2>
+          <p>An exclusive residential project in Hyde Park, showcasing modern elegance with custom-designed elements and sophisticated color palettes throughout.</p>
+        </div>
+
+        <div class="carousel-container">
+          <div class="gallery-grid active" data-project="hyde-park" data-slide="0">
+            <div class="gallery-item" onclick="openLightbox('hyde-park', 0)">
+              <img src="hyde_park/h1.jpg" alt="HYDE PARK Living Room">
+              <div class="gallery-overlay">
+                <h3>Main Living Space</h3>
+                <p>Spacious and bright design</p>
+              </div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox('hyde-park', 1)">
+              <img src="hyde_park/h2.jpg" alt="HYDE PARK Kitchen">
+              <div class="gallery-overlay">
+                <h3>Gourmet Kitchen</h3>
+                <p>State-of-the-art appliances</p>
+              </div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox('hyde-park', 2)">
+              <img src="hyde_park/h3.jpg" alt="HYDE PARK Bedroom">
+              <div class="gallery-overlay">
+                <h3>Bedroom Suite</h3>
+                <p>Serene and comfortable</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-grid" data-project="hyde-park" data-slide="1">
+            <div class="gallery-item" onclick="openLightbox('hyde-park', 3)">
+              <img src="hyde_park/h4.jpg" alt="HYDE PARK Bathroom">
+              <div class="gallery-overlay">
+                <h3>Luxury Bathroom</h3>
+                <p>Premium fixtures and finishes</p>
+              </div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox('hyde-park', 4)">
+              <img src="hyde_park/h5.jpg" alt="HYDE PARK Terrace">
+              <div class="gallery-overlay">
+                <h3>Outdoor Terrace</h3>
+                <p>Seamless indoor-outdoor living</p>
+              </div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox('hyde-park', 5)">
+              <img src="hyde_park/h6.jpg" alt="HYDE PARK Details">
+              <div class="gallery-overlay">
+                <h3>Custom Details</h3>
+                <p>Bespoke design elements</p>
+              </div>
+            </div>
+          </div>
+
+          <button class="carousel-arrow carousel-prev" onclick="navigateSlide('hyde-park', -1)">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="carousel-arrow carousel-next" onclick="navigateSlide('hyde-park', 1)">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+
+
+      <!-- Living Room Designs -->
+      <div class="gallery-group">
+        <div class="gallery-text">
+          <h2>Elegant Living Spaces</h2>
+          <p>Our living room designs combine comfort with sophistication, creating spaces that are both inviting and impressive. We focus on optimal furniture placement, lighting design, and color schemes that reflect our clients' personalities.</p>
+        </div>
+        <div class="gallery-grid">
+          <div class="gallery-item" onclick="openLightbox('living', 0)">
+            <img src="living/0.jpg" alt="Modern Living Room">
+            <div class="gallery-overlay">
+              <h3>Modern Elegance</h3>
+              <p>Minimalist design with premium materials</p>
+            </div>
+          </div>
+          <div class="gallery-item" onclick="openLightbox('living', 1)">
+            <img src="living/2.jpg" alt="Cozy Living Room">
+            <div class="gallery-overlay">
+              <h3>Cozy Comfort</h3>
+              <p>Warm tones and comfortable furnishings</p>
+            </div>
+          </div>
+          <div class="gallery-item" onclick="openLightbox('living', 2)">
+            <img src="living/4.jpg" alt="Cozy Living Room">
+            <div class="gallery-overlay">
+              <h3>Living Room view</h3>
+              <p>simple but hits</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kitchen Designs -->
+      <div class="gallery-group">
+        <div class="gallery-text">
+          <h2>Functional Kitchen Designs</h2>
+          <p>Our kitchen designs blend functionality with aesthetics. We create spaces that are not only beautiful but also highly efficient for cooking and socializing. From modern minimalist to classic traditional, we bring your dream kitchen to life.</p>
+        </div>
+        <div class="gallery-grid">
+          <div class="gallery-item" onclick="openLightbox('kitchen', 0)">
+            <img src="kitchen/0.jpg" alt="Modern Kitchen">
+            <div class="gallery-overlay">
+              <h3>Contemporary Kitchen</h3>
+              <p>Clean lines and smart storage solutions</p>
+            </div>
+          </div>
+          <div class="gallery-item" onclick="openLightbox('kitchen', 1)">
+            <img src="kitchen/2.jpg" alt="Luxury Kitchen">
+            <div class="gallery-overlay">
+              <h3>Luxury Design</h3>
+              <p>High-end materials and custom cabinetry</p>
+            </div>
+          </div>
+          <div class="gallery-item" onclick="openLightbox('kitchen', 2)">
+            <img src="kitchen/3.jpg" alt="Modern Kitchen">
+            <div class="gallery-overlay">
+              <h3>Kitchen Walkthrough</h3>
+              <p>See the functionality in action</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bedroom Designs -->
+      <div class="gallery-group">
+        <div class="gallery-text">
+          <h2>Serene Bedroom Retreats</h2>
+          <p>We create bedrooms that serve as personal sanctuaries. Our designs focus on creating peaceful environments that promote rest and relaxation, with careful attention to lighting, color psychology, and furniture placement.</p>
+        </div>
+        <div class="gallery-grid">
+          <div class="gallery-item" onclick="openLightbox('bedroom', 0)">
+            <img src="bedroom/0.jpg" alt="Master Bedroom">
+            <div class="gallery-overlay">
+              <h3>Master Suite</h3>
+              <p>Luxurious and spacious design</p>
+            </div>
+          </div>
+          <div class="gallery-item" onclick="openLightbox('bedroom', 1)">
+            <img src="bedroom/0G3A5228-HDR.jpg" alt="Modern Bedroom">
+            <div class="gallery-overlay">
+              <h3>Contemporary Retreat</h3>
+              <p>Clean design with warm elements</p>
+            </div>
+          </div>
+          <div class="gallery-item" onclick="openLightbox('bedroom', 2)">
+            <img src="bedroom/2.jpg" alt="Modern Bedroom">
+            <div class="gallery-overlay">
+              <h3>Bedroom Features</h3>
+              <p>Custom finishing and lighting solutions</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bathroom Designs -->
+      <div class="gallery-group">
+        <div class="gallery-text">
+          <h2>Luxury Bathroom Spaces</h2>
+          <p>Our bathroom designs transform functional spaces into luxurious retreats. We combine premium materials, innovative storage solutions, and spa-like elements to create bathrooms that are both beautiful and practical.</p>
+        </div>
+        <div class="gallery-grid">
+          <div class="gallery-item" onclick="openLightbox('bathroom', 0)">
+            <img src="bathroom/0.jpg" alt="Luxury Bathroom">
+            <div class="gallery-overlay">
+              <h3>Spa Bathroom</h3>
+              <p>Freestanding tub and natural materials</p>
+            </div>
+          </div>
+          <div class="gallery-item" onclick="openLightbox('bathroom', 1)">
+            <img src="bathroom/0G3A5217-HDR.jpg" alt="Modern Bathroom">
+            <div class="gallery-overlay">
+              <h3>Modern Design</h3>
+              <p>Clean lines and innovative fixtures</p>
+            </div>
+          </div>
+          <div class="gallery-item" onclick="openLightbox('bathroom', 2)">
+            <img src="bathroom/0G3A5151-HDR.jpg" alt="Modern Bedroom">
+            <div class="gallery-overlay">
+              <h3>Bathroom Features</h3>
+              <p>Smart storage and lighting solutions</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-cta">
+        <h2>Inspired by Our Work?</h2>
+        <p>Let's discuss how we can transform your space into something extraordinary.</p>
+        <a href="https://wa.me/201066679868" target="_blank" class="btn">Get in Touch</a>
+        <a href="index.html" class="btn btn-outline">Back to Home</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+    <div class="lightbox-content">
+      <img id="lightbox-img" src="" alt="">
+    </div>
+    <div class="lightbox-nav">
+      <span class="lightbox-prev" onclick="changeImage(-1)">&#10094;</span>
+      <span class="lightbox-next" onclick="changeImage(1)">&#10095;</span>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>El-Leithy</h3>
+          <p>Transforming spaces with innovative design and exceptional craftsmanship since 2010.</p>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <a href="index.html">Home</a>
+          <a href="index.html#about">About Us</a>
+          <a href="#">Services</a>
+          <a href="index.html#social">Connect</a>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Contact Info</h3>
+          <p>+20 1066679868</p>
+          <p>el-leithy@el-leithy.com</p>
+          <p>Cairo, Egypt</p>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Business Hours</h3>
+          <p>Sunday-Thursday: 9am - 6pm</p>
+          <p>Friday: 2pm - 6pm</p>
+          <p>Saturday: Closed</p>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 El-Leithy Finishing. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Contact Button -->
+  <button class="contact-btn" id="contact-btn">
+    <i class="fas fa-comment"></i>
+  </button>
+
+  <!-- Hidden Contact Info -->
+  <div id="contact-info" class="contact-info">
+    <p>📞 +20 1066679868</p>
+    <p>✉️ el-leithy@el-leithy.com</p>
+    <a href="https://wa.me/201066679868" target="_blank">WhatsApp Us</a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Finishing Calculator - El-Leithy</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <!-- Header -->
+  <header id="header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">El-Leithy</a>
+      
+      <div class="hamburger" id="hamburger">
+        <i class="fas fa-bars"></i>
+      </div>
+      
+      <ul class="nav-menu" id="nav-menu">
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="index.html#about" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="index.html#social" class="nav-link">Connect</a></li>
+        <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li class="nav-item"><a href="calculator.html" class="nav-link active">Calculator</a></li>
+       <!-- <li class="nav-item"><a href="#" class="btn btn-outline">Contact</a></li> -->
+      </ul>
+    </div>
+  </header>
+
+  <section class="calculator-section">
+    <div class="container">
+      <div class="section-header fade-in">
+        <p class="section-subtitle">ESTIMATE YOUR PROJECT</p>
+        <h1 class="section-title">Home Finishing Calculator</h1>
+        <p class="section-description">
+          Get an accurate estimate for finishing your entire home based on area and finishing quality.
+        </p>
+      </div>
+
+      <div class="calculator-container fade-in">
+        <div class="calculator-form">
+          <div class="form-section">
+            <h3><i class="fas fa-home"></i> Property Details</h3>
+            
+            <div class="form-group">
+              <label for="property-type">Property Type</label>
+              <select id="property-type">
+                <option value="apartment">Apartment</option>
+                <option value="duplex">Duplex</option>
+                <option value="villa">Villa</option>
+                <option value="townhouse">Townhouse</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="total-area">Total Area (m²)</label>
+              <input type="number" id="total-area" min="50" step="1" value="120">
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h3><i class="fas fa-door-open"></i> Rooms Information</h3>
+            <p class="info-note">(For reference only - doesn't affect calculation)</p>
+            
+            <div class="form-group">
+              <label for="bedrooms">Number of Bedrooms</label>
+              <input type="number" id="bedrooms" min="1" max="10" value="3">
+            </div>
+            
+            <div class="form-group">
+              <label for="bathrooms">Number of Bathrooms</label>
+              <input type="number" id="bathrooms" min="1" max="10" value="2">
+            </div>
+            
+            <div class="form-group">
+              <label for="living-rooms">Number of Living Rooms</label>
+              <input type="number" id="living-rooms" min="1" max="5" value="1">
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h3><i class="fas fa-paint-roller"></i> Finishing Preference</h3>
+            
+            <div class="finishing-options">
+              <div class="finishing-option">
+                <input type="radio" id="finishing-basic" name="finishing" value="basic" checked>
+                <label for="finishing-basic">
+                  <h4>Basic Finishing</h4>
+                  <p>Standard quality materials, essential features only</p>
+                  <span class="price-per-m2">3,500 EGP/m²</span>
+                </label>
+              </div>
+              
+              <div class="finishing-option">
+                <input type="radio" id="finishing-standard" name="finishing" value="standard">
+                <label for="finishing-standard">
+                  <h4>Standard Finishing</h4>
+                  <p>Good quality materials, balanced between cost and quality</p>
+                  <span class="price-per-m2">5,000 EGP/m²</span>
+                </label>
+              </div>
+              
+              <div class="finishing-option">
+                <input type="radio" id="finishing-premium" name="finishing" value="premium">
+                <label for="finishing-premium">
+                  <h4>Premium Finishing</h4>
+                  <p>High-end materials, premium features and finishes</p>
+                  <span class="price-per-m2">7,500 EGP/m²</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <button id="calculate-btn" class="btn btn-large">
+            <i class="fas fa-calculator"></i> Calculate Estimate
+          </button>
+        </div>
+
+        <div class="calculator-results">
+          <div class="results-card">
+            <h3>Estimated Cost</h3>
+            <div class="cost-display">
+              <span class="cost-amount">0</span>
+              <span class="currency">EGP</span>
+            </div>
+            
+            <div class="cost-summary">
+              <h4>Project Summary</h4>
+              <div class="summary-item">
+                <span class="summary-label">Property Type</span>
+                <span class="summary-value" id="summary-type">Apartment</span>
+              </div>
+              <div class="summary-item">
+                <span class="summary-label">Total Area</span>
+                <span class="summary-value"><span id="summary-area">0</span> m²</span>
+              </div>
+              <div class="summary-item">
+                <span class="summary-label">Finishing Type</span>
+                <span class="summary-value" id="summary-finishing">Basic</span>
+              </div>
+              <div class="summary-item">
+                <span class="summary-label">Bathrooms</span>
+                <span class="summary-value"><span id="summary-bathrooms">0</span> × 90,000 EGP</span>
+              </div>
+            </div>
+            
+            <div class="cost-breakdown">
+              <h4>Cost Breakdown</h4>
+              <div class="breakdown-item">
+                <span class="breakdown-label">Base Finishing Cost</span>
+                <span class="breakdown-value">0 EGP</span>
+              </div>
+              <div class="breakdown-item">
+                <span class="breakdown-label">Property Type Multiplier</span>
+                <span class="breakdown-value">0 EGP</span>
+              </div>
+              <div class="breakdown-item">
+                <span class="breakdown-label">Bathrooms Cost</span>
+                <span class="breakdown-value">0 EGP</span>
+              </div>
+              <div class="breakdown-item total">
+                <span class="breakdown-label">Total Estimate</span>
+                <span class="breakdown-value">0 EGP</span>
+              </div>
+            </div>
+            
+            <p class="disclaimer">This is an estimate. Final cost may vary based on actual requirements and site conditions.</p>
+            
+            <button id="save-estimate" class="btn btn-outline">
+              <i class="fas fa-download"></i> Save Estimate
+            </button>
+            <button id="print-estimate" class="btn btn-outline">
+              <i class="fas fa-print"></i> Print Estimate
+            </button>
+            <button id="consultation-btn" class="btn">
+              <i class="fas fa-calendar"></i> Schedule Consultation
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>El-Leithy</h3>
+          <p>Transforming spaces with innovative design and exceptional craftsmanship since 2010.</p>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <a href="index.html">Home</a>
+          <a href="index.html#about">About Us</a>
+          <a href="#">Services</a>
+          <a href="index.html#social">Connect</a>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Contact Info</h3>
+          <p>+20 1066679868</p>
+          <p>el-leithy@el-leithy.com</p>
+          <p>Cairo, Egypt</p>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Business Hours</h3>
+          <p>Sunday-Thursday: 9am - 6pm</p>
+          <p>Friday: 2pm - 6pm</p>
+          <p>Saturday: Closed</p>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 El-Leithy Finishing. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Contact Button -->
+  <button class="contact-btn" id="contact-btn">
+    <i class="fas fa-comment"></i>
+  </button>
+
+  <!-- Hidden Contact Info -->
+  <div id="contact-info" class="contact-info">
+    <p>📞 +20 1066679868</p>
+    <p>✉️ el-leithy@el-leithy.com</p>
+    <a href="https://wa.me/201066679868" target="_blank">WhatsApp Us</a>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="calculator.js"></script>
+</body>
+</html>
