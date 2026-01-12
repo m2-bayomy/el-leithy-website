@@ -1518,34 +1518,7 @@ footer {
   transform: translateY(0);
 }
 
-/* Fix mobile menu being behind page content */
-@media (max-width: 768px) {
-  header {
-    position: sticky;
-    top: 0;
-    z-index: 10000;
-  }
 
-  .nav-menu {
-    position: fixed;
-    top: 70px;
-    left: 0;
-    right: 0;
-    z-index: 10001;
-    background: #fff;
-    padding: 16px;
-  }
-
-  .nav-menu.active {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  .gallery-section {
-    padding-top: 90px;
-  }
-}
 
 @supports (-webkit-touch-callout: none) {
   @media (max-width: 768px) {
@@ -1556,29 +1529,40 @@ footer {
 }
 
 
-/* ✅ Mobile: disable 3D flip card (fixes buttons hidden under cards on phones) */
+/* ✅ Mobile cards: keep cards, disable flip, use image + info (no duplicate titles) */
 @media (max-width: 576px) {
   .card {
-    perspective: none; /* IMPORTANT: removes stacking/3D issues on mobile */
+    perspective: none;
+    height: auto;
   }
 
+  /* keep the image area */
   .card-inner {
-    transform: none !important;
-    height: auto;      /* let it fit content safely */
-    overflow: visible; /* allow content layout normally */
+    height: 220px;              /* adjust: 200–260 if you want */
+    transform: none !important; /* no flip */
   }
 
-  /* Hide the flip-back content on mobile (use the card-info buttons instead) */
+  /* stop hover flip on mobile */
+  .card:hover .card-inner {
+    transform: none !important;
+  }
+
+  /* hide the back side completely */
   .card-back {
     display: none;
   }
 
-  /* Make sure the visible info + buttons are always clickable */
+  /* hide the title on the image to avoid duplicate title */
+  .card-front h2 {
+    display: none;
+  }
+
+  /* make sure info + button look good and stay clickable */
   .card-info {
+    margin-top: 14px;
+    padding: 0 12px 22px;
     position: relative;
-    z-index: 20;
-    margin-top: 16px;
-    padding-bottom: 20px;
+    z-index: 5;
   }
 
   .card-info .btn {
