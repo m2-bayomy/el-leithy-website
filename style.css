@@ -1554,3 +1554,36 @@ footer {
     }
   }
 }
+
+
+/* ✅ Mobile: disable 3D flip card (fixes buttons hidden under cards on phones) */
+@media (max-width: 576px) {
+  .card {
+    perspective: none; /* IMPORTANT: removes stacking/3D issues on mobile */
+  }
+
+  .card-inner {
+    transform: none !important;
+    height: auto;      /* let it fit content safely */
+    overflow: visible; /* allow content layout normally */
+  }
+
+  /* Hide the flip-back content on mobile (use the card-info buttons instead) */
+  .card-back {
+    display: none;
+  }
+
+  /* Make sure the visible info + buttons are always clickable */
+  .card-info {
+    position: relative;
+    z-index: 20;
+    margin-top: 16px;
+    padding-bottom: 20px;
+  }
+
+  .card-info .btn {
+    display: inline-block;
+    width: 220px;
+    max-width: 90%;
+  }
+}
