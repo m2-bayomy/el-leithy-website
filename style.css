@@ -345,6 +345,18 @@ header.scrolled {
   background: #e04a4f; /* Darker shade for hover */
 }
 
+@media (max-width: 576px) {
+  .card-info {
+    padding-bottom: 20px;
+  }
+
+  .card-info .btn {
+    display: inline-block;
+    width: 220px;
+    max-width: 90%;
+  }
+}
+
 /* Per-card images with placeholder colors */
 .card1 .card-front { 
   background-image: url('chair.avif');
@@ -1462,7 +1474,8 @@ footer {
 
 @media (max-width: 576px) {
   .hero {
-    padding: 120px 20px 100px; /* Adjusted for mobile */
+    min-height: auto;                 /* instead of forcing 100vh */
+    padding: 110px 20px 40px;         /* less bottom padding */
   }
   
   .hero-title {
@@ -1474,11 +1487,11 @@ footer {
   }
   
   .card {
-    height: 480px;
+    height: auto;          /* let it fit content */
   }
-  
+
   .card-inner {
-    height: 360px;
+    height: 320px;         /* smaller */
   }
   
   .social-icon {
