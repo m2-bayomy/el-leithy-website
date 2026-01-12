@@ -1515,8 +1515,12 @@ footer {
     flex-direction: column;
     gap: 12px;
   }
+  .gallery-section {
+    padding-top: 90px;
+  }
 
   .gallery-section {
     padding-top: 90px;
   }
 }
+
