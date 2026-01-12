@@ -240,3 +240,19 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
+
+// ✅ Mobile: tap to flip the hero cards (because hover doesn't exist on phones)
+(function enableTapFlipCards() {
+  const isTouch = window.matchMedia("(hover: none) and (pointer: coarse)").matches;
+  if (!isTouch) return;
+
+  document.querySelectorAll(".card").forEach((card) => {
+    card.addEventListener("click", (e) => {
+      // If user clicks a button/link inside the card, don't toggle flip
+      if (e.target.closest("a, button")) return;
+      card.classList.toggle("is-flipped");
+    });
+  });
+})();
+
+
