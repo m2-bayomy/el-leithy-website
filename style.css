@@ -1492,37 +1492,7 @@ footer {
   transform: translateY(0);
 }
 
-/* Fix mobile menu being behind page content */
-@media (max-width: 768px) {
-  header {
-    position: sticky;
-    top: 0;
-    z-index: 10000;
-  }
 
-  .nav-menu {
-    position: fixed;
-    top: 70px;
-    left: 0;
-    right: 0;
-    z-index: 10001;
-    background: #fff;
-    padding: 16px;
-  }
-
-  .nav-menu.active {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
-  .gallery-section {
-    padding-top: 90px;
-  }
-
-  .gallery-section {
-    padding-top: 90px;
-  }
-}
 /* ✅ Mobile fix: flip cards on tap (no hover on phones) */
 @media (hover: none) and (pointer: coarse) {
   /* Disable hover flip on touch devices */
@@ -1535,5 +1505,6 @@ footer {
     transform: rotateY(180deg);
   }
 }
+
 
 
