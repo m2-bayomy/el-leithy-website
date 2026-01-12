@@ -1399,22 +1399,35 @@ footer {
 
 @media (max-width: 768px) {
   .nav-menu {
-    position: fixed;
-    top: 80px;
-    right: -100%;
-    background: #fff;
-    width: 80%;
-    height: calc(100vh - 80px);
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transition: var(--transition);
-    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-  }
-  
-  .nav-menu.active {
-    right: 0;
-  }
+  position: fixed;
+  top: 80px;
+  right: 0;
+  width: min(320px, 85vw);
+  height: calc(100vh - 80px);
+  background: #fff;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  padding: 40px 20px;
+  gap: 26px;
+
+  transform: translateX(110%);
+  transition: transform 0.3s ease;
+
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+  z-index: 10001;
+
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.nav-menu.active {
+  transform: translateX(0);
+}
+
   
   .nav-item {
     margin: 15px 0;
@@ -1492,19 +1505,39 @@ footer {
   transform: translateY(0);
 }
 
-
-/* ✅ Mobile fix: flip cards on tap (no hover on phones) */
-@media (hover: none) and (pointer: coarse) {
-  /* Disable hover flip on touch devices */
-  .card:hover .card-inner {
-    transform: none;
+/* Fix mobile menu being behind page content */
+@media (max-width: 768px) {
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 10000;
   }
 
-  /* When we add .is-flipped via JS, flip the card */
-  .card.is-flipped .card-inner {
-    transform: rotateY(180deg);
+  .nav-menu {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    z-index: 10001;
+    background: #fff;
+    padding: 16px;
+  }
+
+  .nav-menu.active {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .gallery-section {
+    padding-top: 90px;
   }
 }
 
-
-
+@supports (-webkit-touch-callout: none) {
+  @media (max-width: 768px) {
+    .nav-menu {
+      height: calc(100dvh - 80px);
+    }
+  }
+}
